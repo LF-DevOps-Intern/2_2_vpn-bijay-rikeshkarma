@@ -1,17 +1,17 @@
 # Create certificates files for both server and client to connect to server and export client certificates to the client vm.
 - Install easy-rsa first to create certificates using the command:  
-  [`yum install easy-rsa`]()
+  [`yum install easy-rsa`](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/blob/main/1/b/install%20easy-rsa.png)
   - making a new directory for easy-rsa to store the certificates, keys:
     - mkdir -p /etc/openvpn/easy-rsa/keys 
       - *p*- make required directories 
     - cp -rf /usr/share/easy-rsa/2.0/* /etc/openvpn/easy-rsa  
       - *r*- copy recursively
       - *f*- force this/ accept
-      - [snapshot]()
+      - [snapshot](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/blob/main/1/b/cp.png)
     - change the variables file in the easy-rsa folder  
       `nano /etc/openvpn/easy-rsa/vars`
       - edit as per requirement
-        - [edited file snapshot for example]()
+        - [edited file snapshot for example](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/blob/main/1/b/editing%20vars%20file.png)
     - now we build the security of our server security certificates and keys. while on the */etc/openvpn/easy-rsa*, we use following commands:
       - `source ./vars`
         - to build our certificate of authority
