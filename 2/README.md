@@ -5,17 +5,15 @@
     _client  
     dev tun  
     proto udp  
-    remote 192.168.254.131 1194  
-    resolv-retry infinite  
-    nobind  
-    persist-key  
-    persist-tun  
-    comp-lzo  
-    verb 3  
+    remote 192.168.254.131 1194 udp   
+    topology subnet
+    pull	
     ca ca.crt  
     cert myclient.crt  
     key myclient.key  
-    auth-user-pass_
+    user nobody  
+    group nogroup
+_
 - On the server, first VM(CentOS) enable to forward packets through its network interface
   - use sysctl to allow IP packet forwarding. Add the following line to the _sysctl.conf_ file
     - `nano /etc/sysctl.conf`
