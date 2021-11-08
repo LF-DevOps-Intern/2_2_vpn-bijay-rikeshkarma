@@ -5,7 +5,7 @@ There are many applications that provide IDS/IPS service and one of them is **Su
 Suricata is the leading independent open source threat detection engine. By combining intrusion detection (IDS), intrusion prevention (IPS), network security monitoring (NSM) and PCAP processing, Suricata can quickly identify, stop, and assess the most sophisticated attacks.
 
 - Let's first install EPEL repositories using the following command:
-  - `yum install epel-release`
+  - [`yum install epel-release`](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/blob/main/3/install%20EPEL%20repositories.png)
 - After installing epl-release check for these additional packages and install them if not available on your system: `gcc flex  bison zlib-devel  libdnet-devel libpcap-devel pcre-devel  et-devel tar make libnetfilter_queue-devel lua-devel PyYAML libmaxminddb-devel rustc cargo lz4-devel  libyaml-devel file-devel  jansson-devel nss-devel libcap-ng-devel`
 - Install **Suricata** using:
   - `yum install suricata`
@@ -13,12 +13,12 @@ Suricata is the leading independent open source threat detection engine. By comb
   - `suricata-update`
 - Configuring the network interface for suricata from the file `/etc/sysconfig/suricata` by editing the last line to:
   - `OPTIONS="-i enp0s3 --user suricata"`
-  - [snapshot]()
+  - [snapshot](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/blob/main/3/configure%20network%20interface%20for%20suricata.png)
 - Starting the Suricata by using this command in the terminal:
   - `systemctl start suricata`
   - we can check the status to verify by:
     - `systemctl status suricata`
-    - [snapshot]()
+    - [snapshot](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/blob/main/3/suricata%20status.png)
 - Now lets add new sample rules, for this we navigate to `/usr/share/suricate/rules/` and nano the `test.rules` file in the directory.
   - Add the following line to the `test.rules` file:
     - `alert http any any -> any any (msg:"Do not read gossip during work"; content:"Scarlett"; nocase; classtype:policy-violation; sid:1; rev:1;)`
@@ -27,4 +27,4 @@ Suricata is the leading independent open source threat detection engine. By comb
     - `usr/share/suricata/rules/test.rules`
 - Lastly we can see the events taking place on the system by tailing the suricata alert logs on suricata host by:
   - `tail -f /var/log/suricata/fast.log`  
-  - [snapshot]()
+  - [snapshot](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/blob/main/3/suricata%20logs.png)
