@@ -7,5 +7,5 @@
   [`yum install openvpn`](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/blob/main/1/install%20OpenVPN.png)   
 
 
-# [1(A)](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/tree/main/1/a)
-# [1(B)](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/tree/main/1/b)
+## [Solution to 1(A)](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/tree/main/1/a)
+## [Solution to 1(B)](https://github.com/LF-DevOps-Intern/2_2_vpn-bijay-rikeshkarma/tree/main/1/b)
